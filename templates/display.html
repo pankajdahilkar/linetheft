@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Electricity Info</title>
+</head>
+<body bgcolor="#f0ffff">
+<table border="2">
+    <tr>
+        <th>sr N</th>
+        <th>Customer Id</th>
+        <th> Customer name</th>
+        <th>vR volts</th>
+        <th>vY  volts</th>
+        <th>vB  volts</th>
+        <th>IR  Amp</th>
+        <th>IY  Amp</th>
+        <th>IB Amp</th>
+        <th>Power Watt</th>
+        <th>Energy consumption Kwh</th>
+        <th>date</th>
+        <th>time</th>
+
+    </tr>
+    {% for rec in records %}
+    <tr>
+        <td>{{ rec.id }}</td>
+        <td>{{ rec.cust_id }}</td>
+        <td>{{ rec.cust_name }}</td>
+        <td>{{ rec.voltage_R }}</td>
+        <td>{{ rec.voltage_Y }}</td>
+        <td>{{ rec.voltage_B }}</td>
+        <td>{{ rec.Ir }}</td>
+        <td>{{ rec.Iy }}</td>
+        <td>{{ rec.Ib }}</td>
+        <td>{{ rec.power }}</td>
+        <td>{{ rec.energy_consumption }}</td>
+        <td>{{ rec.date}}</td>
+        <td>{{ rec.time }}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
